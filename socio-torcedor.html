@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/general.js"></script>
+    <link rel="stylesheet" href="css/general.css">
+
+    <link rel="stylesheet" href="css/socio-torcedor.css">
+    <script src="js/socio-torcedor.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Sócio Torcedor</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="left-side">
+            <div href="index.html">
+                <img src="imgs/logo.png">
+            </div>
+            <a href="noticias.html">Notícias</a>
+            <a href="times.html">Times</a>
+            <!-- <a href="cadastrar-organizacao.html">Cadastrar Time</a> -->
+        </div>
+        <div class="right-side">
+            <a href="ser-socio-torcedor.html">Sócio Torcedor</a>
+            <div class="menu-trigger">
+                <img src="imgs/menu.png" alt="">
+            </div>
+        </div>
+
+        <div class="mobile-menu">
+            <a href="noticias.html">Notícias</a>
+            <a href="times.html">Times</a>
+            <a href="ser-socio-torcedor.html">Sócio Torcedor</a>
+        </div>
+    </div>
+
+
+    <div class="pageContent">
+
+        <h1 id="Titulo">Cadastro para Novos Sócios</h1>
+
+
+        <form id="fVirarSocio" style="text-align: left; margin-top: 50px;">
+
+
+
+            <div class="form-group row">
+                <label for="iCPF" class="col-sm-1 col-form-label">CPF</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" onkeypress="$(this).mask('000.000.000-00');" id="iCPF"
+                        placeholder="000.000.000-00" maxlength="11" autocomplete="off">
+                </div>
+
+                <label for="iRG" class="col-sm-1 col-form-label">RG</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="iRG" placeholder="Digite seu RG...">
+                </div>
+            </div>
+            <div class="form-group row" style="text-align: left; margin-top: 40px;">
+
+
+                <label for="iNome" class="col-sm-1 col-form-label">Nome</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="iNome" placeholder="Nome">
+                </div>
+                <label for="iSobrenome" class="col-sm-2 col-form-label">Sobrenome</label>
+                <div class="col-sm-5" style="margin-left: -92px;">
+                    <input type="text" class="form-control" id="iSobrenome" placeholder="Sobrenome">
+                </div>
+            </div>
+
+            <div class="form-group row" style="text-align: left; margin-top: 40px;">
+
+
+                <label for="iData" class="col-sm-2 col-form-label">Data de Nascimento</label>
+                <div class=" col-sm-4">
+                    <input type="date" class="form-control" id="iData" placeholder="DD/MM/AAAA">
+                </div>
+
+                <label class="col-sm-1 col-form-label">Genêro</label>
+                <div style="display:flex" class=" col-sm-5">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="iGenero">
+                        <label class="form-check-label" style="margin-right: 20px;" for="iGenero">
+                            Masculino
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="iGenero2" checked>
+                        <label class="form-check-label" style="margin-right: 30px;" for="iGenero2">
+                            Feminino
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="iGenero3" checked>
+                        <label class="form-check-label" for="iGenero3">
+                            Não Informar
+                        </label>
+
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="form-group row" style="text-align: left; margin-top: 40px;">
+                <label for="iRaca" class="col-sm-2 col-form-label">Cor ou raça</label>
+                <div class="col-sm-4">
+                    <select class="form-control" id="iRaca" required>
+                        <option value="SO">Selecione sua cor ou raça...</option>
+                        <option value="1">Amarelo</option>
+                        <option value="2">Branca</option>
+                        <option value="3">Indígena</option>
+                        <option value="4">Parda</option>
+                        <option value="5">Preto</option>
+                    </select>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="form-group row" style="text-align: left; margin-top: 40px;">
+                <label for="iEndereco" class="col-sm-1 col-form-label">Endereço</label>
+                <div class="col-sm-5">
+                    <input type="text" class="form-control" id="iEndereco" placeholder="Av Da Saudade, 500">
+                </div>
+
+                <label for="iComplemento" class="col-sm-2 col-form-label">Complemento</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="iComplemento" placeholder="Apartamento, Bloco, Casa">
+                </div>
+            </div>
+
+            <div class="form-group row" style="text-align: left; margin-top: 40px;">
+
+                <label for="iCidade" class="col-sm-1 col-form-label">Cidade</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="iCidade" placeholder="Digite sua cidade...">
+                </div>
+
+
+                <label for="iEstado" class="col-sm-1 col-form-label">Estado</label>
+                <div class="col-sm-2">
+                    <select id="iEstado" class="form-control" required>
+                        <option value="SO">Escolher...</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+
+                <label for="iCEP" class="col-sm-1 col-form-label">CEP</label>
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" id="iCEP" placeholder="00000-000">
+                </div>
+            </div>
+            <div class="form-group row" style="text-align: left; margin-top: 40px;">
+                <label for="iEmail" class="col-sm-1 col-form-label">Email</label>
+                <div class="col-sm-5">
+                    <input type="email" class="form-control" id="iEmail" placeholder="nome@exemplo.com">
+                </div>
+            </div>
+
+            <div class="form-group row" style="text-align: left; margin-top: 40px;">
+                <label for="iSenha" class="col-sm-1 col-form-label">Senha</label>
+                <div class="col-sm-5">
+
+
+                    <img src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png"
+                        id="olho" onclick="senha()" class="imagemolho">
+                    <input type="password" class="form-control" id="iSenha" placeholder="Digite uma senha...">
+
+                    <small id="passwordHelpInline" class="text-muted">
+                        Deve ter entre 6 à 10 caracteres.
+                    </small>
+                </div>
+
+
+            </div>
+
+
+            <div class="form-group row" style="text-align: left; margin-top: 40px;">
+                <label for="iTelefone" class="col-sm-1 col-form-label">Celular</label>
+                <div class="col-sm-5">
+                    <input type="tel" class="form-control" id="iTelefone" maxlength="15" placeholder="(00) 00000-0000">
+
+                </div>
+
+
+
+                <div class="form-group row" style="text-align: left; margin-top: 30px;">
+                    <label class="col-sm-4 col-form-label">Selecione quais estilos mais lhe interessam:</label>
+
+                    <div class="form-check" style="margin-left: 20px;">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">FPS</label>
+                    </div>
+                    <div class="form-check" style="margin-left: 20px;">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                        <label class="form-check-label" for="flexCheckChecked">MOBA</label>
+                    </div>
+                    <div class="form-check" style="margin-left: 20px;">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">RPG</label>
+                    </div>
+                    <div class="form-check" style="margin-left: 20px;">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">Sandbox</label>
+                    </div>
+                </div>
+
+                <div class="form-group" style="text-align: left; margin-top: 50px;">
+                    <div class="form-check" style="margin-left: 10px;">
+                        <input class="form-check-input" type="checkbox" id="iAceite">
+                        <label class="form-check-label" for="iAceite">
+                            Li e aceito a <a class="SignupPolicy-link" href="https://www.teste.com">Política de
+                                privacidade</a>.
+                        </label>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="col-sm-12" style="text-align: center; margin-top: 50px;">
+                    <button id="btCadastrar" onclick="cadastrar()" type='button'
+                        class="btn btn-warning">Cadastrar</button>
+                </div>
+
+
+            </div></br></br>
+
+        </form>
+    </div>
+
+    <div class="footer">
+        <a href="index.html">
+            <img src="imgs/logo.png" alt="" srcset="">
+        </a>
+
+        <a href="noticias.html">Notícias</a>
+        <a href="times.html">Times</a>
+        <a href="ser-socio-torcedor.html">Sócio Torcedor</a>
+        <a class="copyright">
+
+            Desenvolvedores:
+            <ul>
+                <li>Beatriz Oliveira</li>
+                <li>Carol Cordeiro</li>
+                <li>Guilherme Azevedo</li>
+                <li>Leonardo Batista</li>
+                <li>Pedro Salvato</li>
+            </ul>
+        </a>
+
+    </div>
+</body>
+
+</html>

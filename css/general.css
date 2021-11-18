@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #000;
+}
+::-webkit-scrollbar-thumb {
+    background: #f5b111;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #946a08;
+}
+
+@media only screen and (max-width: 992px) {
+    body > .navbar {
+        padding: 0px 5%;
+        box-shadow: 1px 1px rgba(0,0,0,.2);
+    }
+    body > .pageContent {
+        width: 90%;
+        margin: 20px auto;
+    }
+    body > .navbar > div:not(.mobile-menu) > a {
+        display: none;
+    }
+    body > .navbar > .right-side > div {
+        display: block;
+    }
+    body > .navbar > .mobile-menu {
+        display: block;
+    }
+}
+body {
+    margin: 0;
+    padding: 0;
+    background: #f6f6f6;
+    font-family: 'Roboto', sans-serif;
+}
+body.menuOpen {
+    overflow: hidden;
+}
+.navbar {
+    height: 65px;
+    background: #000;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0px 10%;
+}
+.navbar > div {
+    display: flex;
+    column-gap: 20px;
+    align-items: center;
+}
+.navbar > .right-side {
+    justify-content: flex-end;
+}
+.navbar > .right-side > div {
+    display: none;
+}
+.pageContent {
+    background: #ffffff;
+    width: 80%;
+    min-height: 100vh;
+    box-shadow: 0px 1px 5px rgba(0,0,0,.1);
+    margin: 40px auto;
+}
+.navbar > div:not(.mobile-menu) > a {
+    color: #f5b111;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 14px;
+}
+.navbar > div > div > img {
+    height: 30px;
+    transition: all .5s;
+}
+.navbar > div.right-side > div > img {
+    height: 20px;
+}
+.navbar > .mobile-menu {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background: #f5b111;
+    right: -100%;
+    top: 65px;
+    padding-top: 20px;
+    transition: all .5s;
+}
+.navbar > .mobile-menu > a {
+    display: block;
+    margin: 20px 0px;
+    color: #000000;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+}
+.navbar.menuOpen {
+    background: #f5b111;
+}
+.navbar.menuOpen img {
+    filter: brightness(0);
+}
+.footer {
+    background: #000;
+    padding: 0px 10%;
+    padding: 20px 100px;
+}
+.footer > a {
+    display: block;
+    text-align: center;
+    color: #f5b111;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    margin: 5px 0px;
+}
+.footer > a > img{
+    height: 40px;
+    margin-bottom: 10px;
+}
+.copyright {
+    margin-top: 30px !important;
+    cursor: context-menu;
+    color: #ffffff !important;
+}
+.footer > a.copyright > ul {
+    padding: 0;
+    list-style: none;
+    font-size: 12px;
+    opacity: 0.4;
+    text-transform: capitalize !important;
+    display: flex;
+    justify-content: center;
+    column-gap: 10px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+}

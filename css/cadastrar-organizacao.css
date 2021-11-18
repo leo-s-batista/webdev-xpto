@@ -1,0 +1,58 @@
+.pageContent > .title {
+    font-size: 18px;
+    text-transform: uppercase;
+    width: 80%;
+    margin: auto;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 25px;
+    margin-top: 60px;
+}
+.form {
+    width: 50%;
+    margin: auto;
+    margin-top: 40px;
+}
+.form .label {
+    text-decoration: underline;
+    text-decoration-color: #f5b111;
+    text-decoration-thickness: 3px;
+}
+input, select {
+    height: 35px !important;
+}
+.form input, .form textarea, .form select {
+    width: 100%;
+    border: 0;
+    border: 2px solid #000;
+    outline: none;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+.buttonDiv {
+    display: flex;
+    justify-content: center;
+}
+.buttonDiv a {
+    background: #f5b111;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.4);
+    color: #000;
+    border: 0;
+    outline: none;
+    height: 100%;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    transition: all .5s;
+    text-decoration: none;
+}
+button{
+ 
+    margin-left: 0%;
+    background: #f5b111;
+}

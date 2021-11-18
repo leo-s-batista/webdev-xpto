@@ -1,0 +1,73 @@
+
+.pageContent {
+    padding-top: 60px;
+}
+.pageContent > .title {
+    font-size: 30px;
+    text-transform: uppercase;
+    width: 80%;
+    margin: auto;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+}
+.pageContent > .title > a {
+    background: #f5b111;
+    box-shadow: 0px 0px 5px rgba(0,0,0,.4);
+    color: #000;
+    border: 0;
+    outline: none;
+    height: 100%;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    cursor: pointer;
+    transition: all .5s;
+    text-decoration: none;
+
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    row-gap: 50px;
+    column-gap: 50px;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 50px;
+    width: 80%;
+    margin: auto;
+}
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    user-select: none;
+    transition: all .5s;
+    cursor: pointer;
+}
+.item > img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,.3));
+}
+.pageContent > .title > a:hover {
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,.3));
+}
+
+@media only screen and (max-width: 992px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+button{
+ 
+    margin-left: 0%;
+    background: #f5b111;
+}
